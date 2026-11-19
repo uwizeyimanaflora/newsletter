@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | Daily Updates</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Daily Updates Admin</h1>
+<nav>
+    <a href="index.html">View Website</a>
+    <a href="subscribers.html">View Subscribers</a>
+</nav>
+    </header>
+
+    <section id="admin">
+        <h2>Add New Update</h2>
+
+        <form id="updateForm">
+
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter update title"
+                required
+            >
+
+            <select id="category" required>
+                <option value="">Choose category</option>
+                <option value="Technology">Technology</option>
+                <option value="Education">Education</option>
+                <option value="Opportunities">Opportunities</option>
+            </select>
+
+            <textarea
+                id="description"
+                placeholder="Enter update description"
+                required
+            ></textarea>
+
+            <input
+                type="url"
+                id="link"
+                placeholder="Enter opportunity link"
+            >
+
+            <button type="submit">Publish Update</button>
+
+        </form>
+
+        <p id="adminMessage"></p>
+
+<!-- Manage Published Updates -->
+<div id="manageUpdates">
+
+    <h2>Manage Published Updates</h2>
+
+    <div id="adminUpdatesList">
+    </div>
+
+    <p id="noUpdatesMessage"></p>
+
+</div>
+
+    </section>
+
+    <script src="admin.js"></script>
+
+</body>
+</html>

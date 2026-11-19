@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Subscribers | Daily Updates</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Daily Updates Admin</h1>
+
+        <nav>
+            <a href="admin.html">Dashboard</a>
+            <a href="index.html">View Website</a>
+        </nav>
+    </header>
+
+    <!-- Subscribers Section -->
+    <section id="subscribers">
+
+        <h2>Our Subscribers</h2>
+
+        <h3>
+            Total Subscribers:
+            <span id="totalSubscribers">0</span>
+        </h3>
+
+        <!-- Subscribers Table -->
+        <div class="table-container">
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Email Address</th>
+                    </tr>
+                </thead>
+
+                <tbody id="subscriberList">
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- Message when there are no subscribers -->
+        <p id="emptyMessage"></p>
+
+    </section>
+
+    <!-- JavaScript File -->
+    <script src="subscribers.js"></script>
+
+</body>
+</html>

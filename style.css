@@ -1,0 +1,731 @@
+
+/* General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f8ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1769aa;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: slide-down 600ms ease-out both;
+}
+
+header h1 {
+    font-size: 28px;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 180ms ease, transform 180ms ease;
+}
+
+nav a:hover {
+    color: #cce5ff;
+    transform: translateY(-2px);
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #e1efff;
+}
+
+#home h2 {
+    font-size: 40px;
+    color: #1769aa;
+    margin-bottom: 15px;
+    animation: rise-in 650ms 100ms ease-out both;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    animation: rise-in 650ms 220ms ease-out both;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #1769aa;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+    animation: rise-in 650ms 340ms ease-out both;
+}
+
+.btn:hover {
+    background-color: #0d4778;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(13, 71, 120, 0.2);
+}
+
+/* General Sections */
+section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+section h2 {
+    color: #1769aa;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+/* Latest Updates */
+.updates-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.update-card {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.update-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(23, 105, 170, 0.16);
+}
+
+.update-card h3 {
+    color: #1769aa;
+    margin-bottom: 10px;
+}
+
+/* Subscribe Section */
+#subscribe {
+    background-color: #e1efff;
+}
+
+form {
+    max-width: 450px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #1769aa;
+    box-shadow: 0 0 0 3px rgba(23, 105, 170, 0.15);
+}
+
+button {
+    background-color: #1769aa;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+button:hover {
+    background-color: #0d4778;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(13, 71, 120, 0.18);
+}
+
+#message {
+    color: green;
+    font-weight: bold;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 600ms ease, transform 600ms ease;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rise-in {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1769aa;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h2 {
+        font-size: 30px;
+    }
+
+    .updates-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Admin Dashboard Styling */
+
+#admin {
+    background-color: #f4f8ff;
+    min-height: 80vh;
+    padding: 60px 20px;
+}
+
+#admin h2 {
+    color: #1769aa;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* Admin Form */
+#updateForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Input, Select and Textarea */
+#updateForm input,
+#updateForm select,
+#updateForm textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #b8cce0;
+    border-radius: 7px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+/* Description field */
+#updateForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Placeholder */
+#updateForm input::placeholder,
+#updateForm textarea::placeholder {
+    color: #777;
+    font-size: 15px;
+}
+
+/* When typing */
+#updateForm input:focus,
+#updateForm select:focus,
+#updateForm textarea:focus {
+    outline: none;
+    border: 2px solid #1769aa;
+    box-shadow: 0 0 5px rgba(23, 105, 170, 0.2);
+}
+
+/* Publish Button */
+#updateForm button {
+    background-color: #1769aa;
+    color: white;
+    padding: 16px;
+    font-size: 17px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#updateForm button:hover {
+    background-color: #0d4778;
+}
+
+/* Admin Message */
+#adminMessage {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Subscribers Dashboard */
+
+#subscribers {
+    min-height: 80vh;
+    background-color: #f4f8ff;
+    padding: 60px 8%;
+}
+
+#subscribers h2 {
+    color: #1769aa;
+    margin-bottom: 25px;
+}
+
+#subscribers h3 {
+    margin-bottom: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+#subscribers table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+#subscribers th,
+#subscribers td {
+    padding: 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#subscribers th {
+    background-color: #1769aa;
+    color: white;
+}
+
+#emptyMessage {
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Subscribers Dashboard */
+
+#subscribers {
+    min-height: 80vh;
+    background-color: #f4f8ff;
+    padding: 60px 8%;
+}
+
+#subscribers h2 {
+    color: #1769aa;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+#subscribers h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#subscribers h3 span {
+    color: #1769aa;
+    font-weight: bold;
+}
+
+/* Table Container */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 25px;
+}
+
+/* Subscribers Table */
+#subscribers table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Headings and Data */
+#subscribers th,
+#subscribers td {
+    padding: 16px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Table Heading */
+#subscribers th {
+    background-color: #1769aa;
+    color: white;
+}
+
+/* Table Rows */
+#subscribers tbody tr:hover {
+    background-color: #e1efff;
+}
+
+/* Empty Message */
+#emptyMessage {
+    margin-top: 20px;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Delete Update Button */
+
+.admin-update button {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 18px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.admin-update button:hover {
+    background-color: #a71d2a;
+}
+
+/* Manage Published Updates */
+
+#manageUpdates {
+    max-width: 1000px;
+    margin: 60px auto 20px;
+    padding: 30px;
+    background-color: #e1efff;
+    border-radius: 12px;
+}
+
+#manageUpdates h2 {
+    color: #1769aa;
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+/* Admin Update Cards */
+
+#adminUpdatesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+#adminUpdatesList .update-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#adminUpdatesList .update-card h3 {
+    color: #1769aa;
+    margin-bottom: 12px;
+}
+
+#adminUpdatesList .update-card p {
+    margin-bottom: 10px;
+}
+
+/* Admin Delete Button */
+
+#adminUpdatesList .update-card button {
+    background-color: #dc3545;
+    color: white;
+    padding: 11px 20px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#adminUpdatesList .update-card button:hover {
+    background-color: #a71d2a;
+}
+
+/* Empty Updates Message */
+
+#noUpdatesMessage {
+    color: #666;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* ==================================
+   MODERN FOOTER
+================================== */
+
+.main-footer {
+    background-color: #123b61;
+    color: white;
+    padding: 60px 8% 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.footer-column h2 span {
+    color: #67b7ff;
+}
+
+.footer-column h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #67b7ff;
+}
+
+.footer-column p {
+    color: #d5e5f5;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    display: block;
+    color: #d5e5f5;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #456783;
+    margin-top: 45px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #d5e5f5;
+    font-size: 14px;
+}
+
+/* Responsive Footer */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+}
+
+/* ==================================
+   MODERN FOOTER
+================================== */
+
+.main-footer {
+    background-color: #123b61;
+    color: white;
+    padding: 60px 8% 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column h2 {
+    font-size: 26px;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.footer-column h2 span {
+    color: #67b7ff;
+}
+
+.footer-column h3 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #67b7ff;
+}
+
+.footer-column p {
+    color: #d5e5f5;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    display: block;
+    color: #d5e5f5;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.footer-column a:hover {
+    color: white;
+    padding-left: 6px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #456783;
+    margin-top: 45px;
+    padding-top: 22px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #d5e5f5;
+    font-size: 14px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* ==================================
+   SUBSCRIBER STATUS
+================================== */
+
+.subscriber-status {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 18px;
+    border-radius: 8px;
+    background-color: white;
+    border: 1px solid #1769aa;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.subscriber-status.member {
+    background-color: #e6f7ec;
+    border: 1px solid #239b56;
+    color: #176b38;
+}
+
+.subscriber-status.visitor {
+    background-color: #fff8e6;
+    border: 1px solid #e0a526;
+    color: #805900;
+}
+
+
+
