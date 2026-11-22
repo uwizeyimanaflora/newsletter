@@ -1,5 +1,5 @@
-Daily Updates – Newsletter Website
-Daily Updates is a website that provides the latest information about technology, education, and different opportunities that help people learn and improve their skills. Visitors can read technology news, programming tips, scholarship opportunities, and other useful updates published by the website administrator. They can also subscribe using their names and email addresses to register on the website.
+Newsletter – Newsletter Website
+Newsletter is a website. is a website that provides the latest information about technology, education, and different opportunities that help people learn and improve their skills. Visitors can read technology news, programming tips, scholarship opportunities, and other useful updates published by the website administrator. They can also subscribe using their names and email addresses to register on the website.
 Live Demo
 https://newsletter-flora.netlify.app
 Features
@@ -9,12 +9,18 @@ Visitor Features
 •	Visitors can subscribe using their names and email addresses.
 •	The website checks for duplicate email addresses before saving a subscription.
 •	Visitors can view the latest published updates on the homepage.
-Admin Features
-•	The administrator can access the Admin Dashboard.
-•	The administrator can add and publish new updates.
-•	The administrator can delete existing updates.
-•	The administrator can view registered subscribers.
-•	The administrator can see the total number of subscribers.
+### Admin Features
+
+The administrator is responsible for managing the content published on the Newsletter website.
+
+- The administrator can access the Admin Dashboard.
+- The administrator can add and publish new updates about technology, education, scholarships, and other opportunities.
+- The administrator decides which information should be displayed on the website.
+- The administrator can delete outdated, incorrect, or unnecessary updates.
+- The administrator can view registered subscribers.
+- The administrator can see the total number of subscribers.
+
+The Admin Dashboard helps the administrator keep the website content updated, useful, and relevant to visitors.
 Other Features
 •	Responsive design for desktop, tablet, and mobile devices.
 •	Simple and user-friendly interface.
